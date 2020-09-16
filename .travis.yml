@@ -1,0 +1,27 @@
+language: cpp
+sudo: false
+install:
+  - sudo apt-get install -y lcov
+  - gem install coveralls-lcov
+addons:
+  apt:
+    packages:
+      - cmake
+    sources:
+      - kalakris-cmake
+
+compiler:
+  - gcc
+
+before_install:
+  - pip install --user cpp-coveralls
+
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+
+after_success:
+  - cd -
+  - cat out.txt
