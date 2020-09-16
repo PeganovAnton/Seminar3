@@ -12,6 +12,6 @@ void Timer::clear_timer(){};
 
 void Timer::print_time() {};
 
-int Timer::get_elapsed_time(char fmt) {};
+int Timer::get_elapsed_time(char fmt) { return 0;};
 
-string Timer::format_elapsed_time() {};
+string Timer::format_elapsed_time() { return "";};
