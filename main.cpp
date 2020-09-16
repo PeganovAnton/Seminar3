@@ -1,24 +1,23 @@
 #include "Timer.h"
 #include <thread>
-#include <fstream>
 
 int main() {
     cout <<"--Timer checks--"<<endl;
 
     class Timer mtimer;
     mtimer.start_timer();
-    std::this_thread::sleep_for(1s);
+    this_thread::sleep_for(seconds (1));
     mtimer.stop_timer();
     mtimer.print_time();
     string rime = mtimer.format_elapsed_time();
 
     mtimer.start_timer();
-    std::this_thread::sleep_for(2s);
+    std::this_thread::sleep_for(seconds (1));
     mtimer.stop_timer();
     mtimer.print_time();
     rime = mtimer.format_elapsed_time();
     mtimer.start_timer();
-    std::this_thread::sleep_for(3s);
+    std::this_thread::sleep_for(seconds (1));
     mtimer.stop_timer();
     mtimer.print_time();
     rime = mtimer.format_elapsed_time();
