@@ -10,7 +10,7 @@ void Timer::start_timer() {
 
 void Timer::stop_timer(){
     end = steady_clock::now();
-    ms = duration_cast<milliseconds>(end - start);
+    ms += duration_cast<milliseconds>(end - start);
 };
 
 void Timer::clear_timer(){
