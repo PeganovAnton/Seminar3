@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 add_executable( TaskTimer
                 Timer.h
                 Timer.cpp
+                Task.h
+                Task.cpp
                 main.cpp)
