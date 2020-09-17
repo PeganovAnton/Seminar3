@@ -1,5 +1,6 @@
 #include "Timer.h"
 #include <thread>
+#include "Task.h"
 
 int main() {
     cout <<"--Timer checks--"<<endl;
@@ -25,5 +26,15 @@ int main() {
     mtimer.print_time();
     cout <<"--Timer checks End--" <<endl<<endl;
     cout <<"Hello World" <<endl;
+
+    cout <<"--Task checks--" <<endl<<endl;
+    class Task *mtask = new Task("seminar3");
+    mtask->statistics();
+    mtask->start();
+    std::this_thread::sleep_for(seconds(4));
+    mtask->stop();
+    mtask->statistics();
+    cout <<"seconds spent on " <<mtask->name <<" " <<mtask->time_spend()<<endl;
+    cout <<"--Task checks End--" <<endl<<endl;
     return 0;
 }
